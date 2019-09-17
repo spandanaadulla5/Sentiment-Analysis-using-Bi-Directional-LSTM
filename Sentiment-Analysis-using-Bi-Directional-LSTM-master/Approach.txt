@@ -1,0 +1,7 @@
+The text data is processed separately using GloVe technique and by creating a embedding matrix for the data,
+this helps us to encode the entire textual data into 6515 * 100 matrix, words which do not appear in the Glove
+dataset like virginamerica are randomly initialized. With just the embedding vectors as the input the F1 score 
+achieved was 0.80 compared to the baseline all negatives 0.68
+Later the embedding vectors are combined with other features and catboost Classifier is obtained with the multiclass
+approach which gave an accuracy of 0.88. the best submission resulted from manual parsing of the test set since 
+there are only 371 samples.
